@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>Hello - options API</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <h1>Hello with Vue.js - options API</h1>
+        <div class="well">
+            <p>
+                <a href="index.html">Back to index</a>
+            </p>
+            <p>Show the value of <strong>hello</strong> variable with Vue.js databinding.</p>
+            <p>Check the following documentation (options API version): <a href="https://vuejs.org/guide/quick-start.html#using-vue-from-cdn">https://vuejs.org/guide/quick-start.html#using-vue-from-cdn</a></p>
+            <p><em>Note 1: Add Vue.js framework using a CDN script reference (e.g. https://unpkg.com/vue@next)</em>
+            </p>
+            <p><em>Note 2: Use a separate JavaScript code file: "hello_options.js"</em> </p>
+        </div>
+        <hr>
+    </div>
+    <div class="row" id="app">
+        <div>
+            <h4>Value of "hello" is: {{ message }} </h4>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script type="text/javascript" src="js/hello_options.js"></script>
+</body>
+
+</html>

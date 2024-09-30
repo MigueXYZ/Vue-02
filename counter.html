@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Counter with Vue.js</h1>
+            <div class="well">
+                <p>
+                    <a href="index.html">Back to index</a>
+                </p>
+                <p>Show and change the value of counter variable with Vue.js databinding.</p>
+                <p>Check Vue.js documentation: <a href="https://vuejs.org/guide/introduction.html">https://vuejs.org/guide/introduction.html</a> and <a href="https://vuejs.org/guide/introduction.html#api-styles">https://vuejs.org/guide/introduction.html#api-styles</a></p>
+                <p><em>Note 1: Add Vue.js framework using a CDN script reference (e.g. https://unpkg.com/vue@next)</em>
+                </p>
+                <p><em>Note 2: Use a separate JavaScript code file: "counter.js"</em> </p>
+            </div>
+            <hr>
+        </div>
+        <div class="row" id="app">
+            <div>
+                <h4>Value of counter = {{count}} </h4>
+            </div>
+            <div class="btn-toolbar">
+                <button @click="decrement" class="btn btn-default">Decrement</button>
+                <button @click="increment" class="btn btn-default">Increment</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+</body>
+
+</html>

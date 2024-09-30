@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>Synchronize Fields (Vue.js)</title>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <h1> Synchronize Fields (Vue.js) </h1>
+        <div class="well">
+            <p> <a href="index.html"> Back to index </a> </p>
+            <p> Synchronize field values with text inputted by the user. </p>
+            <p> The text of the &lt;span&gt; elements of the "top" section, display the value of the fields.</p>
+            <p>Check Vue.js documentation:
+                <a href="https://vuejs.org/guide/essentials/forms.html">
+                    https://vuejs.org/guide/essentials/forms.html</a>
+            </p>
+            <p>Use the <strong>v-model</strong> directive</p>
+            <p> <em> Note: The behavior of the fields Name and Grade are different. Apply the modifier
+                <strong>lazy</strong> to one of the v-model directives</em></p>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Output</div>
+            <div class="panel-body">
+                <span class="alert-info col-md-2" id="nameOutput">{{ name }}</span>
+                <span class="alert-info col-md-2 col-md-offset-1" id="gradeOutput">{{ grade }}</span>
+                <span class="alert-info col-md-2 col-md-offset-1" id="periodOutput">{{ period }}</span>
+            </div>
+        </div>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input v-model="name" type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <input v-model="grade" type="number" class="form-control" id="grade" placeholder="Grade">
+            </div>
+            <div class="form-group">
+                <label for="period">Evaluation Period</label>
+                <select v-model="period" class="form-control" id="period" name="period">
+                    <option value="P"> Periodic Evaluation </option>
+                    <option value="N"> Normal Exam </option>
+                    <option value="A"> Appeal Exam </option>
+                    <option value="S"> Special Exam </option>
+                    <option value="X"> Extraordinary Exam </option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="js/synchronize.js"></script>
+</body>
+
+</html>

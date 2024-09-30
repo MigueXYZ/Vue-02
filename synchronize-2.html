@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>Synchronize Fields - 2(Vue.js)</title>
+</head>
+
+<body>
+    <div class="container" id="app">
+        <h1> Synchronize Fields - 2 (Vue.js) </h1>
+        <div class="well">
+            <p> <a href="index.html"> Back to index </a> </p>
+            <p> Synchronize field values with text inputted by the user. </p>
+            <p> The text of the &lt;span&gt; elements of the "top" section, display the value of the fields.</p>
+            <p>Check Vue.js documentation for binding select options to an array of objects
+                <a href="https://vuejs.org/guide/essentials/forms.html#select">
+                    https://vuejs.org/guide/essentials/forms.html#select</a>
+                and
+                <a href="https://vuejs.org/api/composition-api-lifecycle.html">
+                    https://vuejs.org/api/composition-api-lifecycle.html</a>
+                for the onMounted event
+            </p>
+            <p><em>Note: In this version, the options of the select field will be binded to an array of objects</em></p>
+            <p><em>Note: Use the <strong>v-for</strong> directive</em> to fill the options of the select field</em>
+            <p><em>Sugestion: Bind the options value to an object instead of binding it to a string value.</em></p>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Output</div>
+            <div class="panel-body">
+                <span class="alert-info col-md-2" id="nameOutput">XXX</span>
+                <span class="alert-info col-md-2 col-md-offset-1" id="gradeOutput">XXX</span>
+                <span class="alert-info col-md-2 col-md-offset-1" id="periodOutput">XXX (XXX)</span>
+            </div>
+        </div>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <input type="number" class="form-control" id="grade" placeholder="Grade">
+            </div>
+            <div class="form-group">
+                <label for="period">Evaluation Period</label>
+                <select class="form-control" id="period" name="period">
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="reset" class="btn btn-default">Reset</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="js/synchronize-2.js"></script>
+</body>
+
+</html>
