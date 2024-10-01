@@ -26,28 +26,29 @@
             </p>
             <p><em>Note: In this version, the options of the select field will be binded to an array of objects</em></p>
             <p><em>Note: Use the <strong>v-for</strong> directive</em> to fill the options of the select field</em>
-            <p><em>Sugestion: Bind the options value to an object instead of binding it to a string value.</em></p>
+            <p><em>Suggestion: Bind the options value to an object instead of binding it to a string value.</em></p>
         </div>
         <div class="panel panel-success">
             <div class="panel-heading">Output</div>
             <div class="panel-body">
-                <span class="alert-info col-md-2" id="nameOutput">XXX</span>
-                <span class="alert-info col-md-2 col-md-offset-1" id="gradeOutput">XXX</span>
-                <span class="alert-info col-md-2 col-md-offset-1" id="periodOutput">XXX (XXX)</span>
+                <span class="alert-info col-md-2" id="nameOutput"> {{ name }} </span>
+                <span class="alert-info col-md-2 col-md-offset-1" id="gradeOutput"> {{ grade }} </span>
+                <span class="alert-info col-md-2 col-md-offset-1" id="periodOutput"> {{ selectedPeriod.text }} ({{ selectedPeriod.value }})</span>
             </div>
         </div>
         <form action="#">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name">
+                <input v-model="name" type="text" class="form-control" id="name" placeholder="Name">
             </div>
             <div class="form-group">
                 <label for="grade">Grade</label>
-                <input type="number" class="form-control" id="grade" placeholder="Grade">
+                <input v-model="grade" type="number" class="form-control" id="grade" placeholder="Grade">
             </div>
             <div class="form-group">
                 <label for="period">Evaluation Period</label>
-                <select class="form-control" id="period" name="period">
+                <select v-model="selectedPeriod" class="form-control" id="period" name="period">
+                    <option v-for="period in periods" :value="period">{{ period.text }}</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-success">Submit</button>

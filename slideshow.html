@@ -17,19 +17,19 @@
             <p> Displays an image slide show with navigation links and automatically every 2 seconds.</p>
         </div>
         <div id="actionBar" class="btn-group" role="group">
-            <button id="previous" type="button" class="btn btn-default">Previous</button>
-            <button id="stop" type="button" class="btn btn-default">Stop</button>
-            <button id="restart" type="button" class="btn btn-default">Restart</button>
-            <button id="next" type="button" class="btn btn-default">Next</button>
+            <button @click="prev" id="previous" type="button" class="btn btn-default">Previous</button>
+            <button @click="stop" id="stop" type="button" class="btn btn-default">Stop</button>
+            <button @click="start" id="restart" type="button" class="btn btn-default">Restart</button>
+            <button @click="next" id="next" type="button" class="btn btn-default">Next</button>
         </div>
         <div class="row">
             <p class="col-md-5">
                 <br>
-                <img id="slider" class="img-thumbnail" src="slide_img/img-1.jpeg" alt="Slider">
+                <img id="slider" class="img-thumbnail" :src="images[current]" alt="Slider">
             </p>
         </div>
     </div>
-    <script . . . CDN of Vue.js framework . . .></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="text/javascript" src="js/slideshow.js"></script>
 </body>
 
